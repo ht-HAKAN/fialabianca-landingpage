@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Marcellus', serif;
+    background-color: #000;
+    color: #fff;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.content {
+    text-align: center;
+    max-width: 700px;
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 1.5s;
+}
+
+h1 {
+    font-size: 3.5rem;
+    letter-spacing: 6px;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+.separator {
+    width: 50px;
+    height: 1px;
+    background-color: #fff;
+    margin: 1.5rem auto;
+}
+
+h2 {
+    font-size: 1.6rem;
+    letter-spacing: 3px;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-box {
+    margin-top: 2rem;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.8rem 1.5rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.contact-box:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.contact-box span {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    margin-right: 1rem;
+    padding-right: 1rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-box a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+.contact-box a:hover {
+    text-decoration: underline;
+}
+
+.bg-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    background-color: #000;
+}
+
+.gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(106, 90, 205, 0.1) 0%, rgba(0, 0, 0, 1) 70%);
+}
+
+footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+    z-index: 2;
+}
+
+#lang-toggle {
+    margin-top: 20px;
+    padding: 8px 16px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Marcellus', serif;
+}
+
+#lang-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.fade-out {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.fade-in {
+    animation: textFadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes textFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.8rem;
+        letter-spacing: 5px;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+        letter-spacing: 2px;
+    }
+
+    p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.2rem;
+        letter-spacing: 3px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .contact-box {
+        padding: 0.6rem 1rem;
+    }
+
+    .contact-box span {
+        font-size: 0.8rem;
+        margin-right: 0.8rem;
+        padding-right: 0.8rem;
+    }
+
+    .contact-box a {
+        font-size: 0.9rem;
+    }
+}
+.creator {
+    font-size: 1.4rem;
+    margin-top: 1px;
+    opacity: 0.5;
+}
+
+    .creator a {
+        color: rebeccapurple;
+        text-decoration: underline;
+    }
+
+        .creator a:hover {
+            text-decoration: underline;
+        }
